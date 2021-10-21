@@ -16,6 +16,7 @@ import cloudinary_storage
 import mongoengine
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+import pymongo
 from mongoengine import connect
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -102,17 +103,21 @@ WSGI_APPLICATION = 'project_1.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo_mongodb_engine',
+#         'NAME': 'web-project',
+#         'USER': 'franklin',
+#         'PASSWORD': 'mongodb+srv://franklin:@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+#         'HOST': '*',
+#     }
+# }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'web-project',
-        'ENFORCE_SCHEMA': False,
-        'CLIENT': {
-            'host': "mongodb+srv://franklin:franklin@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-        }
-    }
-}
+
+client = pymongo.MongoClient("mongodb+srv://franklin:<password>@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+db = client.test
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
