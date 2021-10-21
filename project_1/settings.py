@@ -14,7 +14,10 @@ from pathlib import Path
 import os
 import cloudinary_storage
 import mongoengine
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from mongoengine import connect
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -27,9 +30,10 @@ SECRET_KEY = 'django-insecure-clr07)ytz-1h2lr)w=&tfzcc=c1r!llbk)%*znt9%8ch42_ln@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 #
-# mongoengine.connect(db=db_name,host=hostname,username=username,password=pwd)
+#mongoengine.connect(db=,host=hostname,username=username,password=pwd)
 
-ALLOWED_HOSTS = ['127.0.0.1','franci98.herokuapp.com']
+# ALLOWED_HOSTS = ['127.0.0.1','franci98.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -105,11 +109,10 @@ DATABASES = {
         'NAME': 'web-project',
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
-            'host': 'mongodb+srv://franklin:<password>@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+            'host': "mongodb+srv://franklin:franklin@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
         }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
