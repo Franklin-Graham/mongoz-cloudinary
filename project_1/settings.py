@@ -12,14 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import cloudinary_storage
-import dj_database_url
-import mongoengine
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-import pymongo
-from mongoengine import connect
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -30,19 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-clr07)ytz-1h2lr)w=&tfzcc=c1r!llbk)%*znt9%8ch42_ln@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-#
-#mongoengine.connect(db=,host=hostname,username=username,password=pwd)
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','franci98.herokuapp.com']
-
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'app',
-    'cloudinary_storage',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -104,21 +93,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-#
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'djongo_mongodb_engine',
-#         'NAME': 'web-project',
-#         'USER': 'franklin',
-#         'PASSWORD': 'mongodb+srv://franklin:@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-#         'HOST': '*',
-#     }
-# }
-
-
-# DATABASES = {
-#     'default':dj_database_url.config()
-# }
 
 
 # Password validation
@@ -159,17 +133,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
+STATIC_ROOT = os.path.join(BASE_DIR,'assets')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dszi7cfme',
-    'API_KEY': '639523634839843',
-    'API_SECRET': 'YsghfVnsNE9lmTj60jfdqJ1S19g'
-}
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
