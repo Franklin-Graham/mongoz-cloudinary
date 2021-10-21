@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-clr07)ytz-1h2lr)w=&tfzcc=c1r!llbk)%*znt9%8ch42_ln@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 #
 #mongoengine.connect(db=,host=hostname,username=username,password=pwd)
 
