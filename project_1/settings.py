@@ -34,8 +34,8 @@ DEBUG = False
 #
 #mongoengine.connect(db=,host=hostname,username=username,password=pwd)
 
-# ALLOWED_HOSTS = ['127.0.0.1','franci98.herokuapp.com']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1','franci98.herokuapp.com']
+
 
 
 # Application definition
