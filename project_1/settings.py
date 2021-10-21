@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import cloudinary_storage
+import dj_database_url
 import mongoengine
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -115,8 +116,9 @@ WSGI_APPLICATION = 'project_1.wsgi.application'
 # }
 
 
-client = pymongo.MongoClient("mongodb+srv://franklin:<password>@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-db = client.test
+DATABASES = {
+    'default':dj_database_url.config()
+}
 
 
 # Password validation
