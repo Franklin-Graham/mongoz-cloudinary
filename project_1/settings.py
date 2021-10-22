@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-clr07)ytz-1h2lr)w=&tfzcc=c1r!llbk)%*znt9%8ch42_ln@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','franci98.herokuapp.com']
-
+# ALLOWED_HOSTS = ['127.0.0.1','franci98.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -77,17 +77,17 @@ WSGI_APPLICATION = 'project_1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'project_5',
-#         'HOST': '127.0.0.1',
-#         'USER': 'root',
-#         'PORT': '3306',
-#         'PASSWORD': '1234',
-#
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'project_5',
+        'HOST': '127.0.0.1',
+        'USER': 'root',
+        'PORT': '3306',
+        'PASSWORD': '1234',
+
+    }
+}
 
 # DATABASES = {
 #     'default': {
@@ -96,12 +96,15 @@ WSGI_APPLICATION = 'project_1.wsgi.application'
 #     }
 # }
 
+
+
 # import mongoengine
 # mongoengine.connect(db='web-project',username='franklingraham329@gmail.com', password="mongodb+srv://franklin:Franklin@329@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
-DATABASES = {
-     'default': dj_database_url.config('mongodb_url')
-}
+# DATABASES = {
+#      'default': dj_database_url.config("mongodb+srv://franklin:Franklin@329@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+#
+# }
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
