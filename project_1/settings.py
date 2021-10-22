@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+import dj_database_url
 import mongoengine
 from pathlib import Path
 import os
@@ -94,9 +95,12 @@ WSGI_APPLICATION = 'project_1.wsgi.application'
 #     }
 # }
 
-import mongoengine
-mongoengine.connect(db='web-project',username='franklingraham329@gmail.com', password="mongodb+srv://franklin:Franklin@329@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+# import mongoengine
+# mongoengine.connect(db='web-project',username='franklingraham329@gmail.com', password="mongodb+srv://franklin:Franklin@329@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
+DATABASES = {
+     'default': dj_database_url.config()
+}
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
