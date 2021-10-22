@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'project_1.wsgi.application'
 # }
 
 import mongoengine
-mongoengine.connect(db='mongodb',username='franklingraham329@gmail.com', host="mongodb+srv://franklin:Franklin@329@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",password="Franklin@329")
+mongoengine.connect(db='mongodb',username='franklingraham329@gmail.com', host="mongodb+srv://franklin:Franklin@329@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
