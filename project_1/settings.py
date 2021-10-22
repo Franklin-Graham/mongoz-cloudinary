@@ -77,34 +77,29 @@ WSGI_APPLICATION = 'project_1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'project_5',
-        'HOST': '127.0.0.1',
-        'USER': 'root',
-        'PORT': '3306',
-        'PASSWORD': '1234',
-
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'project_5',
+#         'HOST': '127.0.0.1',
+#         'USER': 'root',
+#         'PORT': '3306',
+#         'PASSWORD': '1234',
+#
 #     }
 # }
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
-# import mongoengine
-# mongoengine.connect(db='web-project',username='franklingraham329@gmail.com', password="mongodb+srv://franklin:Franklin@329@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
-# DATABASES = {
-#      'default': dj_database_url.config("mongodb+srv://franklin:Franklin@329@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-#
-# }
+
+
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
