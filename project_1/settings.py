@@ -100,7 +100,7 @@ WSGI_APPLICATION = 'project_1.wsgi.application'
 # mongoengine.connect(db='web-project',username='franklingraham329@gmail.com', password="mongodb+srv://franklin:Franklin@329@franklin.j8xgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
 DATABASES = {
-     'default': dj_database_url.config(mongoengine)
+     'default': dj_database_url.config('mongodb_url')
 }
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
