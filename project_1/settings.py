@@ -16,6 +16,8 @@ import django_heroku
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from pymongo import MongoClient
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -78,6 +80,10 @@ WSGI_APPLICATION = 'project_1.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
+cluster = MongoClient("mongodb+srv://franklin:franklin@cluster0.qbn3q.mongodb.net/data?retryWrites=true&w=majority")
+db = cluster["data"]
+collection = db["data"]
 
 DATABASES = {
     'default': {
