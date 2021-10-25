@@ -20,11 +20,11 @@ def function(request):
     can = Canvas.objects.all()
     bot = Bottle.objects.all()
 
-    i = head.objects.all()
+
     d = pymongo.MongoClient(settings.DB_NAME)
     dbs =  d['data']
     collection = dbs['data']
 
-    con = {'Name':i}
+    con = {'Name':"henry"}
     collection.insert_one(con)
     return render(request,"index.html",{'img':db,'prof':p,'mandala':m,'portrait':por,'canvas':can,'bottle':bot})
