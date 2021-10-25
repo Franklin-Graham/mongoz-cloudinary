@@ -163,7 +163,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 # CLOUDINARY_STORAGE = {
 #     'CLOUD_NAME': 'dszi7cfme',
 #     'API_KEY': '639523634839843',
