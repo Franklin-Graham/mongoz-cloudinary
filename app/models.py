@@ -24,4 +24,4 @@ class Bottle(models.Model):
 
 from mongoengine import fields, Document
 class head(Document):
-    nam = fields.StringField()
+    nam = fields.StringField(required=True)
