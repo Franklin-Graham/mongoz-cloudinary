@@ -7,4 +7,4 @@ from .models import *
 # admin.site.register(Mandal)
 # admin.site.register(Canvas)
 # admin.site.register(Bottle)
-admin.site.register(head)
+# admin.site.register(head)
