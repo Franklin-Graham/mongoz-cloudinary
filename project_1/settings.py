@@ -10,11 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import cloudinary_storage
+import mongoengine
 from pathlib import Path
 import os
 import django_heroku
 import dj_database_url
-
+import pymongo
+import urllib.parse
+from pymongo import MongoClient
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -102,12 +105,27 @@ WSGI_APPLICATION = 'project_1.wsgi.application'
 #     'default': dj_database_url.config()
 # }
 
-DATABASES = {
-     'default': {
-         'ENGINE': 'djongo',
-         'NAME': 'demo',
-     }
-}
+# DATABASES = {
+#      'default': {
+#          'ENGINE': 'django_mangodb_engine',
+#          'NAME': 'demo',
+#          'HOST':'mongodb+srv://Franklin:Franklin@329@cluster0.wnsbn.mongodb.net/demo?retryWrites=true&w=majority',
+#          'PASSWORD': 'Franklin@329',
+#          'USERNAME': 'Franklin'
+#      }
+# }
+
+# usern = urllib.parse.quote_plus('Franklin')
+# pas = urllib.parse.quote_plus('Franklin@329')
+# url = "mongodb+srv://{}:{}@cluster0.wnsbn.mongodb.net/demo?retryWrites=true&w=majority".format(usern,pas)
+#
+# cluster = MongoClient(url)
+# db = cluster['demo']
+# collection = db['text']
+u = urllib.parse.quote('Franklin')
+p = urllib.parse.quote('Franklin@329')
+mongoengine.connect(db='demo',host="mongodb+srv://{}:{}@cluster0.wnsbn.mongodb.net/demo?retryWrites=true&w=majority".format(u,p),username='Franklin',password='Franklin@329')
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
