@@ -79,17 +79,17 @@ WSGI_APPLICATION = 'project_1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd66encbnq7773r',
-        'HOST': 'ec2-54-166-120-40.compute-1.amazonaws.com',
-        'USER': 'gxdrykblyxwzyj',
-        'PORT': '5432',
-        'PASSWORD': 'd907b8a2dc36f46b4a0c70d5a7b9c25a242eae8e7c4990c1e4d5ff881b850a64',
-
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'd66encbnq7773r',
+#         'HOST': 'ec2-54-166-120-40.compute-1.amazonaws.com',
+#         'USER': 'gxdrykblyxwzyj',
+#         'PORT': '5432',
+#         'PASSWORD': 'd907b8a2dc36f46b4a0c70d5a7b9c25a242eae8e7c4990c1e4d5ff881b850a64',
+#
+#     }
+# }
 #
 # DATABASES = {
 #     'default': {
@@ -102,6 +102,12 @@ DATABASES = {
 #     'default': dj_database_url.config()
 # }
 
+DATABASES = {
+     'default': {
+         'ENGINE': 'djongo',
+         'NAME': 'web-frank',
+     }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
