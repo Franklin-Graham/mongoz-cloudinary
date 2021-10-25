@@ -90,7 +90,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'data',
-        'ENFORCE_SCHEME': False,
+        'ENFORCE_SCHEME': True,
         'CLIENT': {
             'host': 'mongodb+srv://franklin:franklin@cluster0.qbn3q.mongodb.net/data?retryWrites=true&w=majority'
                 }
