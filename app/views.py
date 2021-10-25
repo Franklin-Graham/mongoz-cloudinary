@@ -21,8 +21,8 @@ def function(request):
     bot = Bottle.objects.all()
 
     d = pymongo.MongoClient(settings.DB_NAME)
-    db =  d['data']
-    collection = db['data']
+    dbs =  d['data']
+    collection = dbs['data']
 
     con = {'Name':'frankuu'}
     collection.insert_one(con)
