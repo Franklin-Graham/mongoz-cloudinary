@@ -124,7 +124,7 @@ WSGI_APPLICATION = 'project_1.wsgi.application'
 # collection = db['text']
 u = urllib.parse.quote('Franklin')
 p = urllib.parse.quote('Franklin@329')
-mongoengine.connect(db='demo',host="mongodb+srv://{}:{}@cluster0.wnsbn.mongodb.net/demo?retryWrites=true&w=majority".format(u,p),username='Franklin',password='Franklin@329')
+mongoengine.connect(db='demo',host="mongodb+srv://{}:{}@cluster0.wnsbn.mongodb.net/web-franklin?retryWrites=true&w=majority".format(u,p),username='Franklin',password='Franklin@329')
 
 
 # Password validation
