@@ -104,7 +104,7 @@ WSGI_APPLICATION = 'project_1.wsgi.application'
 
 DATABASES = {
      'default': {
-         'ENGINE': 'mongodb',
+         'ENGINE': 'djongo',
          'NAME': 'demo',
      }
 }
