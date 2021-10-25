@@ -22,4 +22,6 @@ class Canvas(models.Model):
 class Bottle(models.Model):
     image = models.ImageField(upload_to='bottle')
 
-
+from mongoengine import fields, Document
+class head(Document):
+    nam = fields.StringField()
