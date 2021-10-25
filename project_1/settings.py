@@ -10,14 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import cloudinary_storage
-import mongoengine
 from pathlib import Path
 import os
 import django_heroku
 import dj_database_url
-import pymongo
-import urllib.parse
-from pymongo import MongoClient
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -31,8 +28,8 @@ SECRET_KEY = 'django-insecure-clr07)ytz-1h2lr)w=&tfzcc=c1r!llbk)%*znt9%8ch42_ln@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['127.0.0.1','franci98.herokuapp.com']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1','franci98.herokuapp.com']
+
 
 # Application definition
 
@@ -82,17 +79,17 @@ WSGI_APPLICATION = 'project_1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'd66encbnq7773r',
-#         'HOST': 'ec2-54-166-120-40.compute-1.amazonaws.com',
-#         'USER': 'gxdrykblyxwzyj',
-#         'PORT': '5432',
-#         'PASSWORD': 'd907b8a2dc36f46b4a0c70d5a7b9c25a242eae8e7c4990c1e4d5ff881b850a64',
-#
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd66encbnq7773r',
+        'HOST': 'ec2-54-166-120-40.compute-1.amazonaws.com',
+        'USER': 'gxdrykblyxwzyj',
+        'PORT': '5432',
+        'PASSWORD': 'd907b8a2dc36f46b4a0c70d5a7b9c25a242eae8e7c4990c1e4d5ff881b850a64',
+
+    }
+}
 #
 # DATABASES = {
 #     'default': {
@@ -104,29 +101,6 @@ WSGI_APPLICATION = 'project_1.wsgi.application'
 # DATABASES = {
 #     'default': dj_database_url.config()
 # }
-
-# DATABASES = {
-#      'default': {
-#          'ENGINE': 'django_mangodb_engine',
-#          'NAME': 'demo',
-#          'HOST':'mongodb+srv://Franklin:Franklin@329@cluster0.wnsbn.mongodb.net/demo?retryWrites=true&w=majority',
-#          'PASSWORD': 'Franklin@329',
-#          'USERNAME': 'Franklin'
-#      }
-# }
-
-# usern = urllib.parse.quote_plus('Franklin')
-# pas = urllib.parse.quote_plus('Franklin@329')
-# url = "mongodb+srv://{}:{}@cluster0.wnsbn.mongodb.net/demo?retryWrites=true&w=majority".format(usern,pas)
-#
-# cluster = MongoClient(url)
-# db = cluster['demo']
-# collection = db['text']
-u = urllib.parse.quote('Franklin')
-p = urllib.parse.quote('Franklin@329')
-mongoengine.connect(db='demo',host="mongodb+srv://{}:{}@cluster0.wnsbn.mongodb.net/web-franklin?retryWrites=true&w=majority".format(u,p),username='Franklin',password='Franklin@329')
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
