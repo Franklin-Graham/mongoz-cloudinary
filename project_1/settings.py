@@ -105,7 +105,7 @@ WSGI_APPLICATION = 'project_1.wsgi.application'
 DATABASES = {
      'default': {
          'ENGINE': 'djongo',
-         'NAME': 'web-frank',
+         'NAME': 'demo',
      }
 }
 
