@@ -37,7 +37,7 @@ ALLOWED_HOSTS = ['127.0.0.1','franci98.herokuapp.com']
 
 INSTALLED_APPS = [
     'app',
-    'cloudinary_storage',
+#    'cloudinary_storage',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -164,14 +164,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dszi7cfme',
-    'API_KEY': '639523634839843',
-    'API_SECRET': 'YsghfVnsNE9lmTj60jfdqJ1S19g'
-}
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': 'dszi7cfme',
+#     'API_KEY': '639523634839843',
+#     'API_SECRET': 'YsghfVnsNE9lmTj60jfdqJ1S19g'
+# }
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+#DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
