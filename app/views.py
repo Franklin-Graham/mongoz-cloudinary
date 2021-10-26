@@ -17,7 +17,4 @@ def function(request):
     m = Mandal.objects.all()
     can = Canvas.objects.all()
     bot = Bottle.objects.all()
-
-
-
     return render(request,"index.html",{'img':db,'prof':p,'mandala':m,'portrait':por,'canvas':can,'bottle':bot})
